@@ -1,3 +1,60 @@
+:root {
+  --header-height: 80px;
+  --nav-font-size: 14px;
+  --blue: #00acdc;
+}
+
 body {
+  box-sizing: border-box;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: white;
+
+  height: var(--header-height);
+}
+
+.logo {
+  background-color: white;
+  padding: 10px 50px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: var(--header-height);
+  padding: 0 50px;
+}
+
+.nav__link:link {
+  margin: 0 20px;
+  padding-top: calc(
+    (var(--header-height) / 2) - calc(var(--nav-font-size) / 2)
+  );
+  font-size: var(--nav-font-size);
+  color: black;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--blue);
+  border: solid var(--blue);
+  border-width: 0 0 4px;
+}
+
+.nav__link:active {
+  color: var(--blue);
+  border: solid var(--blue);
+  border-width: 0 0 4px;
 }
